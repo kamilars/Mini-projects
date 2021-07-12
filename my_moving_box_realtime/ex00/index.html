@@ -1,0 +1,16 @@
+<html>
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+
+    
+        my_box = document.getElementById("my_box_realtime");
+        setInterval(moveBox, 500);
+        
+        function moveBox() {
+            if (parseFloat(my_box.style.right) > 0 && parseFloat(my_box.style.bottom) > 0) {
+                my_box.style.right = (parseFloat(my_box.style.right)-1) + 'px';
+                my_box.style.bottom = (parseFloat(my_box.style.bottom)-1) + 'px';
+            }
+        }
+    </script>
+</html>
